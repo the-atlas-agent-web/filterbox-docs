@@ -1,11 +1,11 @@
 {
- "version": "0.3.2",
+ "version": "0.3.3",
  "min_version": "0.3.1",
- "released": "2026-10-30T17:35:32Z",
- "notes": "First OTA payload: 18-language panel, dashboard v2, IPv6 AAAA filtering, LAN name service",
+ "released": "2026-10-30T17:36:13Z",
+ "notes": "Panel update opt-in, he/ru strings, OTA client refinements",
  "cohort": "all",
- "url": "https://docs.maemetrics.com/filterbox/releases/filterbox-ota-0.3.2.tar.xz",
- "sha256": "83f38784ead07e238593fbe132a9f67687502afc7eec7338154219dd64e3bc83",
+ "url": "https://docs.maemetrics.com/filterbox/releases/filterbox-ota-0.3.3.tar.xz",
+ "sha256": "718251ad899a0ccdb1a5e17ed4f7f13fd7b5f586be726467225cc2a92f77eac4",
  "revoked": [],
  "files": {
   "payload/fb-cover.py": "4938cb1a5f2d832e540bf9023e134fd06fd711297fbc673beeaf98f7d72791f2",
