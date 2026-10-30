@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reinstall FilterBox</title>
+<style>
+:root{--bg:#0b0f1c;--card:#121a30;--line:#22304f;--ink:#eaf0ff;--mut:#9fb0cf;--acc:#5b8cff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1100px 600px at 50% -10%,#17213d 0,var(--bg) 60%);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px 70px}
+h1{font-size:34px;line-height:1.15;margin:0 0 10px}
+h2{font-size:21px;margin:34px 0 10px}
+p{color:var(--mut);margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:18px 0}
+.btn{display:inline-block;background:var(--acc);color:#04102b;font-weight:700;text-decoration:none;padding:13px 20px;border-radius:12px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600}
+ol{padding-left:22px;color:var(--mut)} li{margin:6px 0}
+code{background:#0a1020;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:14px;color:#cfe0ff}
+.warn{border-color:#5c2230;background:#1c1018}
+.tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8fb0ff;border:1px solid #2b4a86;border-radius:999px;padding:3px 10px;margin-bottom:12px}
+a{color:#9dbcff}
+</style></head><body><div class="wrap">
+<span class="tag">FilterBox recovery</span>
+<h1>Reinstall your FilterBox</h1>
+<p>Reinstalling writes a fresh system image to the SD card. Everything on the box is replaced — settings, statistics and custom lists. Only do this when the box cannot recover on its own.</p>
+
+<div class="card">
+  <h2 style="margin-top:0">When a reinstall is the right move</h2>
+  <ol>
+    <li>The box does not boot (no light, no Wi-Fi, no <code>filterbox.lan</code> after 10 minutes).</li>
+    <li>A major system update is required and cannot be delivered automatically.</li>
+    <li>A major Pi-hole update is required that the updater cannot install safely.</li>
+    <li>The support team asks you to reinstall.</li>
+  </ol>
+  <p style="margin-bottom:0">Small fixes — filtering, dashboard, languages — arrive automatically. You do not need a card reader for those.</p>
+</div>
+
+<h2>1. Download the image</h2>
+<div class="card">
+  <p>Latest system image (about 380 MB, compressed):</p>
+  <a class="btn" id="dl" href="https://github.com/the-atlas-agent-web/filterbox-docs/releases/latest">Download the latest image</a>
+  <p style="margin:14px 0 0;font-size:14px">The download is a <code>.img.xz</code> file. Do not unpack it — the flasher does that.</p>
+</div>
+
+<h2>2. Write it to the SD card</h2>
+<div class="card">
+  <p><b>macOS or Linux</b> — with our flasher (checks the write afterwards):</p>
+  <ol>
+    <li>Insert the card and find its disk (<code>diskutil list external</code> on macOS, <code>lsblk</code> on Linux).</li>
+    <li>Run <code>flash-card.sh ~/Downloads/filterbox-*.img.xz --disk /dev/rdiskN</code></li>
+    <li>Wait for <code>FLASH VERIFIED OK</code>, then eject.</li>
+  </ol>
+  <p><b>Windows</b> — use <a href="https://etcher.balena.io/">balenaEtcher</a> or <a href="https://rufus.ie/">Rufus</a>: choose the <code>.img.xz</code> file, choose the card, flash, verify.</p>
+</div>
+
+<h2>3. Start it</h2>
+<div class="card">
+  <ol>
+    <li>Put the card back in the box, connect the network cable where the router was, power on.</li>
+    <li>Wait about three minutes.</li>
+    <li>Open <a href="http://filterbox.lan">http://filterbox.lan</a> on any phone or computer on the network.</li>
+    <li>If the page does not open, try <a href="http://filterbox.local">http://filterbox.local</a>.</li>
+  </ol>
+</div>
+
+<div class="card warn">
+  <p style="margin:0"><b>Reading this page on the box that needs reinstalling?</b> Download the image to a computer first — the box cannot write to its own card.</p>
+</div>
+
+<p style="margin-top:34px;font-size:14px">Need help? <a href="mailto:support@maemetrics.com">support@maemetrics.com</a></p>
+</div></body></html>
