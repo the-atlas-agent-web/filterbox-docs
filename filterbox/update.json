@@ -1,17 +1,17 @@
 {
- "version": "0.3.15",
+ "version": "0.3.17",
  "protocol": 1,
- "sequence": 1793455507,
+ "sequence": 1793463666,
  "min_version": "0.0.0",
- "released": "2026-10-31T14:05:07Z",
- "notes": "UI polish: visible Pause button, amber/red/green state dots, centered login, top-left toast, clamped chart tooltips, unified settings; no functional changes to filtering.",
+ "released": "2026-10-31T16:21:06Z",
+ "notes": "Owner-only full-page login for dashboard and settings; settings layout fixes; OTA checks immediately after boot (no six-hour jitter).",
  "cohort": "all",
- "url": "https://docs.maemetrics.com/filterbox/releases/filterbox-ota-0.3.15.tar.xz",
- "sha256": "d5aa8f6596d6aca4ec37b31031d9e6f63463f37cef7a888db18b059f1463635e",
+ "url": "https://docs.maemetrics.com/filterbox/releases/filterbox-ota-0.3.17.tar.xz",
+ "sha256": "216899928b9dadcf9087327ac0f843843df5e2cc661248f7a9bf79dea50a13e3",
  "revoked": [],
  "files": {
   "config.json": "53457888849fc93f5d823a48c17a62b7ce15d8ca145f8cff2ead9d444fc29028",
-  "payload/VERSION": "304ee74090c149b24dd0a0c279da94cdff8469db1dda00a60560626a54c4cfec",
+  "payload/VERSION": "b8a6c4cd9e419b086b9c9321e1b727f039264d78cc8cac9680528d9b3d0637e7",
   "payload/fb-avahi-alias.sh": "28c100cb3c535bdabec356b035e56302d4353844c2fe77a7705b11415e9bc06e",
   "payload/fb-cover-guard.sh": "64db7aea4d6b5322edcbef384cffdee8af277f5153f958633c59c4947aeb7db2",
   "payload/fb-cover-net.sh": "48258d81a193051ea7bfd10ab06b9ff2d8502feb6c81f65b79b3a86b57af89d9",
@@ -26,7 +26,7 @@
   "payload/fb-lan-name.sh": "0184c8156a86e975d462820979c327a1858e980b7916e8a4ae2be1f6596cd8b6",
   "payload/fb-memguard.sh": "c76a14818ed5bbd9eda4f8f2006ab77895e4c1b83f479aff2d918e094cdb4d7d",
   "payload/fb-netwatch.sh": "fc8abd74106b02f25d96aee06ce0263b40aa792fd1bd772b690b464a20600b7c",
-  "payload/fb-panel.py": "c445906e3050185e5b698e7c3fb0e423394f0396d7d66f0469f6ab1d1a29990b",
+  "payload/fb-panel.py": "651bd2c8a407632b421d70d2b0375a2b1b6f5cc7061e3922d0408d1a82de7469",
   "payload/fb-reset-button.py": "8371febeebe09e15b4d0069d19cd462ea572c28f823f354de6b417194e76b64b",
   "payload/fb-reset-finish.sh": "dded9c1ee145bdec8cee4836266d6ad833d1512764b0c3160ad1b459e57a0e84",
   "payload/fb-update.py": "f664c457b866be37b0ea06bca38efbf11b924f58549bf1918774eff436cd8961",
@@ -55,7 +55,7 @@
   "units/fb-reset-finish.service": "0c71764debe6e341e96d085a73b53881e3f253ceb44ad6accb1da4a03f757eed",
   "units/fb-reset-finish.timer": "7abc60bbbc96c3c1c3965ef47988c8d61ab86993fd5b81534d2352db6aaaf1ec",
   "units/fb-update.service": "71b5762c087e45910023cdddf04adfc49d7f76a3d295e2062ed99d96c1a84446",
-  "units/fb-update.timer": "986498d7e38492719978ae678b5f763c93701ed8e77e42f8b47c2538dbde7b6c",
+  "units/fb-update.timer": "e17aa9f4d5392ed252273be2f920f08773c60242e4f6d48be6f3ea4bdc9acce5",
   "units/fb-wizard.service": "4b8b5e5d9e952fd7a022a746564bb36e26e0b450e86ea7b4f0513825e9ce574f"
  }
 }
